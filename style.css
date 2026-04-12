@@ -1,0 +1,25 @@
+body {
+    background-color: powderblue;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: orange;
+}
+
+.btn {
+    font-size: 40px;
+    border-radius: 12px;
+    margin-right: 50px;
+}
+
+.label {
+    font-size: 40px;
+}
+
+.textarea {
+    font-size: 30px;
+}
