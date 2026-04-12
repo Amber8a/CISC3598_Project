@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>This is Amber's SE LAB#1</title>
+
+      <style>
+         body { background-color: powderblue;}
+         h1   { color:            blue;      }
+         h2   { color:            orange;    }
+      </style>
+   </head>
+
+   <body>
+      <center>
+         <br>
+         <br>
+         <h1>Amber Ochoa : Simple CGI Call to the Back-End Server STORM</h1>
+         <br>
+         <br>
+         <br>
+         <br>
+
+         <div id="serverButtons">
+            <button type="button" onclick="doDateTime()"    style="font-size:40px;margin-right:50px;border-radius:12px" title="Click button to get server info!">GET SERVER INFO</button>
+            <button type="button" onclick="getAllRecords()" style="font-size:40px;border-radius:12px"                   title="Click button get all requests!">LIST SERVER REQUESTS</button>
+         </div>
+
+         <br>
+         <br>
+         <br>
+         <br>
+         <label style="font-size:40px;">Response</label>
+         <textarea readonly id="serverResponse" style="font-size:30px;" rows="19" cols="60"></textarea>
+         <br>
+         <br>
+      </center>
