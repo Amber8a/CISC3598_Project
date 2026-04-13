@@ -10,7 +10,7 @@
       <div class="navbar">
          <div class="navbar-container">
             <div class="logo-container">
-               <h1 class="logo">Nova</h1>
+               <a href="index.html" class="logo">Nova</a>
             </div>
             <div class="menu-container">
                <ul class="menu-list">
@@ -21,11 +21,21 @@
                   <li class="menu-list-item">Sign Up</li>
                </ul>
             </div>
-            <div class="account-container">
+            <div class="account-container" id="accountBtn">
                <img class="account-picture" src="img/acc_profile.jpg" alt="">
                <div class="account-text-container">
                   <span class="account-text">Account</span>
-                  <i class="fas fa-caret-down"></i>
+                  <i class="fas fa-caret-down" id="accountCaret"></i>
+               </div>
+               <div class="account-dropdown" id="accountDropdown">
+                  <div class="account-dropdown-item" onclick="window.location.href='pages/profile/profile.html'">
+                     <i class="fas fa-user"></i>
+                     <span>Profile</span>
+                  </div>
+                  <div class="account-dropdown-item" onclick="window.location.href='pages/dashboard/dashboard.html'">
+                     <i class="fas fa-film"></i>
+                     <span>Movie Dashboard</span>
+                  </div>
                </div>
             </div>
          </div>

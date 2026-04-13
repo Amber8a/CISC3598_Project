@@ -30,6 +30,8 @@ body {
 .logo {
   font-size: 30px;
   color: orange;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .menu-container {
@@ -64,6 +66,59 @@ body {
 
 .account-text-container {
   margin: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#accountCaret {
+  transition: transform 0.3s ease;
+}
+
+#accountCaret.open {
+  transform: rotate(180deg);
+}
+
+.account-dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: black;
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 180px;
+  z-index: 100;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  clip-path: inset(0 -20px -20px -20px);
+}
+
+.account-dropdown.open {
+  display: block;
+}
+
+.account-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+  color: white;
+  font-family: "Sen", sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.account-dropdown-item:hover {
+  background-color: #1a1a1a;
+}
+
+.account-dropdown-item i {
+  color: orange;
+  width: 16px;
+  text-align: center;
 }
 
 .sidebar {
@@ -95,7 +150,7 @@ body {
 }
 
 .featured-content {
-  height: 50vh;
+  min-height: 50vh;
   padding: 50px;
 }
 

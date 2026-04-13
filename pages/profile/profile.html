@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+      <title>Profile | Nova</title>
+      <link rel="stylesheet" href="../../style.css">
+      <link rel="stylesheet" href="profile.css">
+   </head>
+
+   <body>
+      <div class="navbar">
+         <div class="navbar-container">
+            <div class="logo-container">
+               <a href="../../index.html" class="logo">Nova</a>
+            </div>
+            <div class="menu-container">
+               <ul class="menu-list">
+                  <li class="menu-list-item">Home</li>
+                  <li class="menu-list-item">Movies</li>
+                  <li class="menu-list-item">Theatres</li>
+                  <li class="menu-list-item">Popular</li>
+                  <li class="menu-list-item">Sign Up</li>
+               </ul>
+            </div>
+            <div class="account-container" id="accountBtn">
+               <img class="account-picture" src="../../img/acc_profile.jpg" alt="">
+               <div class="account-text-container">
+                  <span class="account-text">Account</span>
+                  <i class="fas fa-caret-down" id="accountCaret"></i>
+               </div>
+               <div class="account-dropdown" id="accountDropdown">
+                  <div class="account-dropdown-item" onclick="window.location.href='../profile/profile.html'">
+                     <i class="fas fa-user"></i>
+                     <span>Profile</span>
+                  </div>
+                  <div class="account-dropdown-item" onclick="window.location.href='../dashboard/dashboard.html'">
+                     <i class="fas fa-film"></i>
+                     <span>Movie Dashboard</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="sidebar">
+         <i class="left-menu-icon fas fa-search"></i>
+         <i class="left-menu-icon fas fa-home"></i>
+         <i class="left-menu-icon fas fa-bookmark"></i>
+         <i class="left-menu-icon fas fa-shopping-cart"></i>
+      </div>
+
+      <div class="container">
+         <div class="content-container">
+            <h1 class="page-title">Profile</h1>
+         </div>
+      </div>
+
+      <script src="profile.js"></script>
+   </body>
+</html>
