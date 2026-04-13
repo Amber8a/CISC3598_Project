@@ -1,29 +1,128 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>This is SE LAB</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+      <title>Movie Showtimes | Nova </title>
       <link rel="stylesheet" href="style.css">
    </head>
 
    <body>
-      <center>
-         <br><br>
-         <h1>Simple CGI Call to the Back-End Server</h1>
-         <br><br><br><br>
-
-         <div id="serverButtons">
-            <button type="button" onclick="doDateTime()" class="btn" title="Click button to get server info!"> GET SERVER INFO</button> 
-            <button type="button" onclick="getAllRecords()" class="btn" title="Click button get all requests!"> LIST SERVER REQUESTS</button>
+      <div class="navbar">
+         <div class="navbar-container">
+            <div class="logo-container">
+               <h1 class="logo">Nova</h1>
+            </div>
+            <div class="menu-container">
+               <ul class="menu-list">
+                  <li class="menu-list-item active">Home</li>
+                  <li class="menu-list-item">Movies</li>
+                  <li class="menu-list-item">Theatres</li>
+                  <li class="menu-list-item">Popular</li>
+                  <li class="menu-list-item">Sign Up</li>
+               </ul>
+            </div>
+            <div class="account-container">
+               <img class="account-picture" src="img/acc_profile.jpg" alt="">
+               <div class="account-text-container">
+                  <span class="account-text">Account</span>
+                  <i class="fas fa-caret-down"></i>
+               </div>
+            </div>
          </div>
-
-         <br><br><br><br>
-         <label class="label">Response</label>
-         <textarea readonly id="serverResponse" class="textarea" rows="19" cols="60"></textarea>
-         <br><br>
-      </center>
+      </div>
+      <div class="sidebar">
+         <i class="left-menu-icon fas fa-search"></i>
+         <i class="left-menu-icon fas fa-home"></i>
+         <i class="left-menu-icon fas fa-bookmark"></i>
+         <i class="left-menu-icon fas fa-shopping-cart"></i>
+      </div>
+      <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+               style="background: linear-gradient(to bottom, orange 0%, black 100%);">
+               <img class="featured-title" src="img/Hoppers.jpg" alt="">
+               <p class="featured-desc">A 19-year-old animal lover uses technology that places her consciousness 
+                  into a robotic beaver to uncover mysteries within the animal world beyond her imagination.</p>
+               <button class="featured-button">WATCH</button>
+            </div>
+            <div class="movie-list-container">
+               <h1 class="movie-list-title">NOW PLAYING</h1>
+               <div class="movie-list-wrapper">
+                  <div class="movie-list">
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/SuperMario.jpg" alt="">
+                        <span class="movie-list-item-title">Super Mario</span>
+                        <p class="movie-list-item-desc">Mario ventures into space, exploring cosmic worlds and 
+                           tackling galactic challenges far from the familiar Mushroom Kingdom.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/HailMary.jpg" alt="">
+                        <span class="movie-list-item-title">Hail Mary</span>
+                        <p class="movie-list-item-desc">A science teacher wakes up alone on a spaceship. 
+                           As his memory returns, he uncovers a mission to stop a mysterious substance 
+                           killing Earth's sun and that an unexpected friendship may be the key.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/Hoppers.jpg" alt="">
+                        <span class="movie-list-item-title">Hoppers</span>
+                        <p class="movie-list-item-desc">A 19-year-old animal lover uses technology that places her 
+                           consciousness into a robotic beaver to uncover mysteries within the animal world beyond 
+                           her imagination.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/TheDrama.jpg" alt="">
+                        <span class="movie-list-item-title">The Drama</span>
+                        <p class="movie-list-item-desc">A happily engaged couple is put to the test when an unexpected 
+                           turn sends their wedding week off the rails.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/YouMeTuscany.jpg" alt="">
+                        <span class="movie-list-item-title">You, Me, Tuscany</span>
+                        <p class="movie-list-item-desc">When a woman crashes at an empty Italian villa, posing as the 
+                           owner's fiancée, she discovers an unexpected romance that could transform her life.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/TheyWillKillYou.jpg" alt="">
+                        <span class="movie-list-item-title">They Will Kill You</span>
+                        <p class="movie-list-item-desc">A woman takes a job as a housekeeper in a NYC high-rise, unaware 
+                           of the building's history of disappearances. She soon realizes the community is shrouded in mystery.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/Scream7.jpg" alt="">
+                        <span class="movie-list-item-title">Scream 7</span>
+                        <p class="movie-list-item-desc">When a new Ghostface killer emerges in the town where Sidney Prescott 
+                           has built a new life, her darkest fears are realized as her daughter becomes the next target.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/Exit8.jpg" alt="">
+                        <span class="movie-list-item-title">Exit 8</span>
+                        <p class="movie-list-item-desc">A man becomes increasingly desperate when he realizes he is trapped 
+                           in a subway station, needing to complete a mission to get out.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                     <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/GOAT.jpg" alt="">
+                        <span class="movie-list-item-title">GOAT</span>
+                        <p class="movie-list-item-desc">A small goat with big dreams gets a once-in-a-lifetime shot to join 
+                           the pros and play roarball, a high-intensity, co-ed, full-contact sport dominated by the fastest, 
+                           fiercest animals in the world.</p>
+                        <button class="movie-list-item-button">Watch</button>
+                     </div>
+                  </div>
+                  <i class="fas fa-chevron-right arrow"></i>
+               </div>
+            </div>
+         </div>
+      </div>
       <script src="main.js"></script>
    </body>
-
 </html>
 
 
