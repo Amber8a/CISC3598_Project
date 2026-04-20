@@ -1,8 +1,6 @@
 import { supabase } from '../../supabase.js'
 
-const { data: { session } } = await supabase.auth.getSession();
-const isLoggedIn = !!session;
-
+const isLoggedIn = false;
 document.querySelectorAll(".logged-in-item").forEach(el => el.style.display = isLoggedIn ? "flex" : "none");
 document.querySelectorAll(".logged-out-item").forEach(el => el.style.display = isLoggedIn ? "none" : "flex");
 
@@ -27,3 +25,18 @@ if (isLoggedIn) {
     window.location.href = "../../index.html";
   });
 }
+
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const errorMsg = document.getElementById("errorMsg");
+
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    errorMsg.textContent = error.message;
+  } else {
+    window.location.href = "../../index.html";
+  }
+});
