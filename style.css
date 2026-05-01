@@ -133,10 +133,16 @@ body {
   padding-top: 60px;
 }
 
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
 .left-menu-icon {
   color: white;
   font-size: 20px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .container {
@@ -165,6 +171,10 @@ body {
 }
 
 .featured-button {
+  bottom: auto;
+  left: auto;
+  margin-top: 20px;
+  cursor: pointer;
   background-color: orange;
   color: white;
   padding: 10px 20px;

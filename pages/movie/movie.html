@@ -2,9 +2,9 @@
 <html>
    <head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-      <title>Create Account | Nova</title>
+      <title>Movie Details | Nova</title>
       <link rel="stylesheet" href="../../style.css">
-      <link rel="stylesheet" href="register.css">
+      <link rel="stylesheet" href="movie.css">
    </head>
 
    <body>
@@ -16,7 +16,7 @@
             <div class="menu-container">
                <ul class="menu-list">
                   <li class="menu-list-item">Home</li>
-                  <li class="menu-list-item">Movies</li>
+                  <li class="menu-list-item active">Movies</li>
                   <li class="menu-list-item">Theatres</li>
                   <li class="menu-list-item">Popular</li>
                </ul>
@@ -32,7 +32,7 @@
                      <i class="fas fa-sign-in-alt"></i>
                      <span>Log In</span>
                   </div>
-                  <div class="account-dropdown-item logged-out-item" onclick="window.location.href='register.html'">
+                  <div class="account-dropdown-item logged-out-item" onclick="window.location.href='../register/register.html'">
                      <i class="fas fa-user-plus"></i>
                      <span>Create Account</span>
                   </div>
@@ -60,39 +60,14 @@
          <i class="left-menu-icon fas fa-shopping-cart"></i>
       </div>
 
-      <div class="container">
-         <div class="content-container">
-            <div class="auth-container">
-               <h1 class="auth-title">Create Account</h1>
-               <form class="auth-form" id="registerForm">
-                  <div class="auth-field">
-                     <label>First Name</label>
-                     <input type="text" id="firstName" placeholder="Enter your first name" required>
-                  </div>
-                  <div class="auth-field">
-                     <label>Last Name</label>
-                     <input type="text" id="lastName" placeholder="Enter your last name" required>
-                  </div>
-                  <div class="auth-field">
-                     <label>Email</label>
-                     <input type="email" id="email" placeholder="email@gmail.com" required>
-                  </div>
-                  <div class="auth-field">
-                     <label>Phone</label>
-                     <input type="tel" id="phone" placeholder="+1 (555) 555-5555" maxlength="17">
-                  </div>
-                  <div class="auth-field">
-                     <label>Password</label>
-                     <input type="password" id="password" placeholder="Create a password" required>
-                  </div>
-                  <p class="auth-error" id="errorMsg"></p>
-                  <button type="submit" class="auth-button">Create Account</button>
-                  <p class="auth-switch">Already have an account? <a href="../login/login.html">Log in</a></p>
-               </form>
-            </div>
-         </div>
+      <div class="movie-container">
+        <!-- temp back button, change to bookmark button later -->
+         <a href="../../index.html" class="back-button">Back</a> 
+         <h1 id="title"></h1>
+         <img id="poster" src="" alt="">
+         <p id="desc"></p>
+         <div id="trailer"></div>
+         <script type="module" src="movie.js"></script>
       </div>
-
-      <script type="module" src="register.js"></script>
    </body>
 </html>

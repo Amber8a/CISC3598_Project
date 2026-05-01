@@ -53,31 +53,31 @@
       </div>
       <div class="sidebar">
          <i class="left-menu-icon fas fa-search"></i>
-         <i class="left-menu-icon fas fa-home"></i>
+         <a href="../../index.html"><i class="left-menu-icon fas fa-home"></i></a>
          <i class="left-menu-icon fas fa-bookmark"></i>
          <i class="left-menu-icon fas fa-shopping-cart"></i>
       </div>
       <div class="container">
         <div class="content-container">
             <div class="featured-content"
-               style="background: linear-gradient(to bottom, orange 0%, black 100%);">
+               style="background: linear-gradient(to bottom, orange 0%, black 100%);" data-id="1327819">
                <img class="featured-title" src="img/Hoppers.jpg" alt="">
                <p class="featured-desc">A 19-year-old animal lover uses technology that places her consciousness 
                   into a robotic beaver to uncover mysteries within the animal world beyond her imagination.</p>
-               <button class="featured-button">WATCH</button>
+               <button class=" featured-button">WATCH</button>
             </div>
             <div class="movie-list-container">
                <h1 class="movie-list-title">NOW PLAYING</h1>
                <div class="movie-list-wrapper">
                   <div class="movie-list">
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="502356">
                         <img class="movie-list-item-img" src="img/SuperMario.jpg" alt="">
                         <span class="movie-list-item-title">Super Mario</span>
                         <p class="movie-list-item-desc">Mario ventures into space, exploring cosmic worlds and 
                            tackling galactic challenges far from the familiar Mushroom Kingdom.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="687163">
                         <img class="movie-list-item-img" src="img/HailMary.jpg" alt="">
                         <span class="movie-list-item-title">Hail Mary</span>
                         <p class="movie-list-item-desc">A science teacher wakes up alone on a spaceship. 
@@ -85,7 +85,7 @@
                            killing Earth's sun and that an unexpected friendship may be the key.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="1327819">
                         <img class="movie-list-item-img" src="img/Hoppers.jpg" alt="">
                         <span class="movie-list-item-title">Hoppers</span>
                         <p class="movie-list-item-desc">A 19-year-old animal lover uses technology that places her 
@@ -93,42 +93,42 @@
                            her imagination.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="1325734">
                         <img class="movie-list-item-img" src="img/TheDrama.jpg" alt="">
                         <span class="movie-list-item-title">The Drama</span>
                         <p class="movie-list-item-desc">A happily engaged couple is put to the test when an unexpected 
                            turn sends their wedding week off the rails.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="1455079">
                         <img class="movie-list-item-img" src="img/YouMeTuscany.jpg" alt="">
                         <span class="movie-list-item-title">You, Me, Tuscany</span>
                         <p class="movie-list-item-desc">When a woman crashes at an empty Italian villa, posing as the 
                            owner's fiancée, she discovers an unexpected romance that could transform her life.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="1292695">
                         <img class="movie-list-item-img" src="img/TheyWillKillYou.jpg" alt="">
                         <span class="movie-list-item-title">They Will Kill You</span>
                         <p class="movie-list-item-desc">A woman takes a job as a housekeeper in a NYC high-rise, unaware 
                            of the building's history of disappearances. She soon realizes the community is shrouded in mystery.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="1159559">
                         <img class="movie-list-item-img" src="img/Scream7.jpg" alt="">
                         <span class="movie-list-item-title">Scream 7</span>
                         <p class="movie-list-item-desc">When a new Ghostface killer emerges in the town where Sidney Prescott 
                            has built a new life, her darkest fears are realized as her daughter becomes the next target.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="1408208">
                         <img class="movie-list-item-img" src="img/Exit8.jpg" alt="">
                         <span class="movie-list-item-title">Exit 8</span>
                         <p class="movie-list-item-desc">A man becomes increasingly desperate when he realizes he is trapped 
                            in a subway station, needing to complete a mission to get out.</p>
                         <button class="movie-list-item-button">Watch</button>
                      </div>
-                     <div class="movie-list-item">
+                     <div class="movie-list-item" data-id="1297842">
                         <img class="movie-list-item-img" src="img/GOAT.jpg" alt="">
                         <span class="movie-list-item-title">GOAT</span>
                         <p class="movie-list-item-desc">A small goat with big dreams gets a once-in-a-lifetime shot to join 
@@ -141,6 +141,10 @@
                </div>
             </div>
          </div>
+      </div>
+      <div>
+         <span id="closeBtn">&times;</span>
+         <iframe id="trailerFrame" frameborder="0" allowfullscreen></iframe>
       </div>
       <script type="module" src="main.js"></script>
    </body>

@@ -36,7 +36,7 @@ arrows.forEach((arrow, i) => {
   const items = list.querySelectorAll(".movie-list-item");
   let currentIndex = 0;
   arrow.addEventListener("click", () => {
-    const itemWidth = items[0].offsetWidth + 30; // width + margin
+    const itemWidth = items[0].offsetWidth + 30; 
     const ratio = Math.floor(window.innerWidth / itemWidth);
     const maxIndex = items.length - ratio;
     if (currentIndex < maxIndex) {
@@ -48,3 +48,13 @@ arrows.forEach((arrow, i) => {
   });
 });
 
+const watchButtons = document.querySelectorAll(".movie-list-item-button, .featured-button");
+
+watchButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const movieItem = btn.closest("[data-id]");
+    const movieId = movieItem.getAttribute("data-id");
+
+    window.location.href = `pages/movie/movie.html?id=${movieId}`;
+  });
+});
