@@ -12,6 +12,25 @@ body {
   padding: 50px;
 }
 
+.top-section {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.header {
+  color: white;
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 #title {
   color: white;
   font-size: 40px;
@@ -28,22 +47,24 @@ body {
 
 #desc {
   max-width: 600px;
-  margin-top: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
   line-height: 1.6;
   color: #ccc;
 }
 
 #trailer iframe {
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 10px;
   width: 100%;
   max-width: 800px;
   height: 450px;
 }
 
-.back-button {
+.book-button {
   display: inline-block;
   margin-bottom: 30px;
+  width: fit-content;
   padding: 10px 20px;
   background-color: orange;
   color: white;
@@ -53,4 +74,51 @@ body {
   transition: 0.2s;
 }
 
+.time-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
 
+.time-popup.active {
+  display: flex;
+}
+
+.popup-content {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 320px;
+  color: white;
+}
+
+.time-btn {
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.time-btn.active {
+  background: orange;
+  color: white;
+}
+
+.confirm-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -52,21 +52,44 @@
             </div>
          </div>
       </div>
-
       <div class="sidebar">
          <i class="left-menu-icon fas fa-search"></i>
          <a href="../../index.html"><i class="left-menu-icon fas fa-home"></i></a>
          <i class="left-menu-icon fas fa-bookmark"></i>
          <i class="left-menu-icon fas fa-shopping-cart"></i>
       </div>
-
-      <div class="movie-container">
-        <!-- temp back button, change to bookmark button later -->
-         <a href="../../index.html" class="back-button">Back</a> 
+      <div class="movie-container"> 
          <h1 id="title"></h1>
-         <img id="poster" src="" alt="">
-         <p id="desc"></p>
-         <div id="trailer"></div>
+         <div class="top-section">
+            <img id="poster" src="" alt="">
+            <div class="info-section">
+               <h2 class="header">Overview</h2>
+               <p id="desc"></p>
+               <a href="../../index.html" class="book-button">Book</a>
+            </div>
+         </div>
+         <hr> 
+         <div class="bottom-section">
+            <h2 class="header">Watch a Trailer!</h2>
+            <div id="trailer"></div>
+         </div>
+         
+         <div id="timePopup" class="time-popup">
+            <div class="popup-content">
+               <h2>Book a Ticket</h2>
+               <label>Select Date</label>
+               <input type="date" id="bookingDate">
+               <h3>Select a Time</h3>
+               <div class="time-options">
+                  <button class="time-btn">10:00 AM</button>
+                  <button class="time-btn">1:00 PM</button>
+                  <button class="time-btn">6:00 PM</button>
+                  <button class="time-btn">9:00 PM</button>
+               </div>
+               <button id="confirmBooking" class="confirm-btn">Confirm Booking</button>
+               <button id="closePopup" class="close-btn">Close</button>
+            </div>
+         </div>
          <script type="module" src="movie.js"></script>
       </div>
    </body>

@@ -52,8 +52,6 @@ if (movieId) {
 
       if (trailer) {
         const iframe = document.createElement("iframe");
-        iframe.width = "560";
-        iframe.height = "315";
         iframe.src = `https://www.youtube.com/embed/${trailer.key}`;
         iframe.allowFullscreen = true;
 
@@ -64,3 +62,51 @@ if (movieId) {
       document.getElementById("title").innerText = "Error loading movie";
     });
 }
+
+const timePopup = document.getElementById("timePopup");
+const bookBtn = document.querySelector(".book-button");
+const closePopup = document.getElementById("closePopup");
+const timeButtons = document.querySelectorAll(".time-btn");
+const confirmBooking = document.getElementById("confirmBooking");
+
+let selectedTime = null;
+
+bookBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  timePopup.classList.add("active");
+});
+
+closePopup.addEventListener("click", () => {
+  timePopup.classList.remove("active");
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === timePopup) {
+    timePopup.classList.remove("active");
+  }
+});
+
+timeButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (btn.classList.contains("active")) {
+      btn.classList.remove("active");
+      selectedTime = null;
+      return;
+    }
+    timeButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    selectedTime = btn.textContent;
+  });
+});
+
+confirmBooking.addEventListener("click", () => {
+  const date = document.getElementById("bookingDate").value;
+
+  if (!date || !selectedTime) {
+    alert("Please select both date and time!");
+    return;
+  }
+
+  alert(`Booked for ${date} at ${selectedTime}`);
+  timePopup.classList.remove("active");
+});
